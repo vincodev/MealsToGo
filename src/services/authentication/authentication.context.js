@@ -48,7 +48,7 @@ export const AuthenticationContextProvider = ({ children }) => {
             setError("Error: Passwords do not match");
             return;
         }
-        const auth = getAuth(appfire);
+        const auth = getAuth(firebaseinit);
         createUserWithEmailAndPassword(auth, email, password)
             .then((u) => {
                 setUser(u);
